@@ -15,9 +15,9 @@ metadata:
     version: 1.0.0
   creationTimestamp: "2019-05-02T18:07:35Z"
   name: coolstore-monolith-pipeline-build
-  namespace: jen
+  namespace: openshift
   resourceVersion: "57931"
-  selfLink: /apis/template.openshift.io/v1/namespaces/jen/templates/coolstore-monolith-pipeline-build
+  selfLink: /apis/template.openshift.io/v1/namespaces/openshift/templates/coolstore-monolith-pipeline-build
   uid: 29e9f7f2-6d05-11e9-bd5e-16e9a579a4f1
 objects:
 - apiVersion: v1
@@ -274,7 +274,7 @@ objects:
         - coolstore-prod-postgresql
         from:
           kind: ImageStreamTag
-          name: postgresql:latest
+          name: postgresql:9.5
           namespace: ${IMAGE_STREAM_NAMESPACE}
       type: ImageChange
     - type: ConfigChange
