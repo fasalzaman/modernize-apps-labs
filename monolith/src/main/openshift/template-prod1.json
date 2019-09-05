@@ -552,7 +552,7 @@
                 "strategy": {
                     "type": "JenkinsPipeline",
                     "jenkinsPipelineStrategy": {
-                        "jenkinsfile": "node ('maven') {\n  stage 'Build'\n  sleep 5\n\n  stage 'Run Tests in DEV'\n  sleep 10\n\n  stage 'Deploy to PROD' openshift.withCluster() { openshift.tag('ocpuser001-coolstore-dev/coolstore:latest', 'ocpuser001-coolstore-prod/coolstore:prod') } sleep 10\n\n  stage 'Run Tests in PROD'\n  sleep 30\n}"
+                        "jenkinsfile": "node ('maven') {\n  stage 'Build'\n  sleep 5\n\n  stage 'Run Tests in DEV'\n  sleep 10\n\n  stage 'Deploy to PROD'\n openshift.withCluster() {\n openshift.tag('ocpuser0XX-coolstore-dev/coolstore:latest', 'ocpuser0XX-coolstore-prod/coolstore:prod')\n }\n sleep 10\n\n  stage 'Run Tests in PROD'\n  sleep 30\n}"
                     }
                 },
                 "output": {},
