@@ -20,7 +20,7 @@
             "displayName": "ImageStream Namespace",
             "description": "Namespace in which the ImageStreams for Red Hat Middleware images are installed. These ImageStreams are normally installed in the openshift namespace. You should only need to modify this if you've installed the ImageStreams in a different namespace/project.",
             "name": "IMAGE_STREAM_NAMESPACE",
-            "value": "openshift",
+            "value": "IMAGE_STREAM_NAMESPACE",
             "required": true
         }
     ],
@@ -120,7 +120,7 @@
                         "from": {
                             "kind": "ImageStreamTag",
                             "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                            "name": "jboss-eap70-openshift:1.6"
+                            "name": "jboss-eap72-openshift:1.1"
                         }
                     }
                 },
@@ -384,7 +384,7 @@
                             "from": {
                                 "kind": "ImageStreamTag",
                                 "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                                "name": "postgresql:9.5"
+                                "name": "postgresql:9.6"
                             }
                         }
                     },
@@ -527,5 +527,3 @@
         }
     ]
 }
-
-
